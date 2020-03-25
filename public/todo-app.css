@@ -1,116 +1,125 @@
-body{
+body
+{
     margin: 0 auto;
     max-width: 600px;
     font-family: Arial;
     font-weight: 100;
-    }
-
-
-.TodoSection{
+ }
+.TodoSection
+{
     margin-bottom: 20px;
-
-    
-    
 }
-.TodoMain{
+.TodoMain
+{
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .TodoSectionTitle{
+}
+.TodoSectionTitle
+{
    display: flex;
    align-items: center;
     margin-bottom: 8px;
     
 }
-
-.TodoTitle{
+.TodoTitle
+{
     font-size: large;
-    
-
-    
 }
 
-.TodoSubtitle{
+.TodoSubtitle
+{
     font-size: medium;
-    
 }
  
- 
-p{
-    font-size: 18px;
-    line-height: 1.2;
-    margin-left: 10px;
-}
- 
- .TodoItem-Container{
+.TodoItem-Container
+{
      display:flex;
      padding:2px 4px;
      margin-bottom: 20px;
      align-items: center;
      
-     
- }
- .TodoItem{
+}
+ 
+.TodoItem
+ {
     list-style-type: none;
 
  }
- .TodoItem-Container:hover{
+ 
+ .TodoItem-Container:hover
+ {
     background-color: #b3b3b3;
     width:70%
  }
- .TodoItem-delete{
+
+.TodoItem-delete
+ {
      margin-left:30px;
      width: 16px;
  }
 
- .Img-Trash{
+.Img-Trash
+{
     margin-left:10px;
     visibility: hidden;
- }
- .TodoItem-Container:hover img{
+}
+
+.TodoItem-Container:hover img
+{
      visibility: visible;
- }
+}
  
- .TodoOverdue{
+.TodoOverdue
+{
      color: red;
      margin-left: 10px;
- }
- .AddTodo{
+}
+
+.AddTodo
+{
      margin-bottom: 10px;
      display: flex;
      height: 32px;
      align-items: stretch;
      margin-bottom: 24px;
 
- }
- .TodoSectionTitle-Count{
+}
+.TodoSectionTitle-Count
+{
      margin-left: 10px;
- }
- .AddTodo-Button{
+     font-size: 18px;
+     line-height: 1.2;
+    
+}
+.AddTodo-Button
+{
      background-color: #4CAF50;
      text-align: center;
      padding: 5px 10px;
      border: 1px solid transparent;
      border-radius: 4px;
-    
-     color: whitesmoke;
- }
- .AddTodo-Text{
+    color: whitesmoke;
+}
+ 
+.AddTodo-Text
+{
+    padding: 6px 12px ;
+    border-radius: 4px;
+    margin-right: 10px;
+    border: 1px solid gray;
+    font-size:14px;
+}
+.AddTodo-Date
+{
     padding: 6px 12px ;
     border-radius: 4px;
     margin-right: 10px;
     border: 1px solid gray;
     font-size:14px;
  }
- .AddTodo-Date{
-    padding: 6px 12px ;
-    border-radius: 4px;
-    margin-right: 10px;
-    border: 1px solid gray;
-    font-size:14px;
- }
- .TodoCheckbox{
+.TodoCheckbox
+{
      width: 16px;
      height: 16px;
- } 
+} 
