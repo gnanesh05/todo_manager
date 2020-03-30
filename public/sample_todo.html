@@ -12,6 +12,19 @@
 </head>
 
 <body>
+
+    <h1> we're rendering html files !!!</h1>
+
+    <p> we are having <%=Todo.count%> todos here in database </p>
+    <p> we are serving <%=User.count%> users here </p>
+
+    <p> <strong>the todos are </strong> </p>
+    <% Todo.all.each do|todo| %>
+    <div style="display:flex; align-items:center; margin:0 auto">
+        <p style="margin-right:15px"> <%= todo.todo_text%> </p>
+        <p> <em> <%= todo.due_date%> </em> </p>
+    </div>
+    <% end %>
     <main class="TodoMain">
 
         <article>

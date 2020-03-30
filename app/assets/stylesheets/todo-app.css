@@ -70,10 +70,10 @@ body
      visibility: visible;
 }
  
-.TodoOverdue
-{
-     color: red;
-     margin-left: 10px;
+.TodoItem-DueDate{
+    color:blue;
+    margin-left: 10px;
+    font-size: 12px;
 }
 
 .AddTodo
