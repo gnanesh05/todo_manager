@@ -8,16 +8,28 @@
 
                 <% todos.each do |todo|%>
 
-                <li>
-                        <div class="TodoItem-Container">
-                            <input class="TodoCheckbox" type="checkbox">
-                            <%= todo.todo_text %>
-                            <% if show_due_date %>
+                    <% if !(todo.completed && hide_completed)%>
+                      <li>
+                    
+                        
+                           <div class="TodoItem-Container">
+                                   <% if todo.completed %>
+                                     <input class="TodoCheckboxChecked" type="checkbox" checked style>
+                                   <% else %>
+                                     <input class="TodoCheckbox" type="checkbox"> 
+                                    <%end%>
+                                
+                                <%= todo.todo_text %>
+                               
+                               <% if show_due_date %>
                                <p class="TodoItem-DueDate"> <%= todo.due_date.to_s(:short)%></p>
-                            <%end%>
-                            <img class="Img-Trash" src="delete.png">
-                        </div>
-                 </li>
+                               <%end%>
+                        
+                               <img class="Img-Trash" src="delete.png">
+                            </div>
+                        
+                      </li>
+                    <%end%>
 
                 <% end %>
                  </ul>   
