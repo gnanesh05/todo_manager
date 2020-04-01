@@ -118,14 +118,14 @@ body
     margin-right: 10px;
     border: 1px solid gray;
     font-size:14px;
- }
+}
 .TodoCheckbox
 {
      width: 16px;
      height: 16px;
 } 
 
-.TodoCheckboxChecked{
+.TodoCheckboxChecked
+{
     text-decoration: line-through;
-   
 }

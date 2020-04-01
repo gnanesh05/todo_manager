@@ -10,19 +10,17 @@
 
                     <% if !(todo.completed && hide_completed)%>
                       <li>
-                    
-                        
-                           <div class="TodoItem-Container">
+                         
+                            <div class="TodoItem-Container">
                                    <% if todo.completed %>
-                                     <input  type="checkbox" checked >
+                                       <input  type="checkbox" checked >
                                           <div class="TodoCheckboxChecked">
                                              <%= todo.todo_text %>
                                           </div>                                
                                    <% else %>
                                      <input class="TodoCheckbox" type="checkbox"> 
                                       <%= todo.todo_text %>
-                                    
-                                    <%end%>
+                                   <%end%>
 
                                <% if show_due_date %>
                                <p class="TodoItem-DueDate"> <%= todo.due_date.to_s(:short)%></p>
@@ -33,7 +31,6 @@
                         
                       </li>
                     <%end%>
-
                 <% end %>
-                 </ul>   
-            </section>
+                </ul>   
+           </section>
