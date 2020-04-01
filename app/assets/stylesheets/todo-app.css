@@ -39,6 +39,7 @@ body
      margin-bottom: 20px;
      align-items: center;
      
+     
 }
  
 .TodoItem
@@ -124,7 +125,7 @@ body
      height: 16px;
 } 
 
-.TodoItem-Container.TodoCheckboxChecked{
-    text-decoration: line-through solid red;
+.TodoCheckboxChecked{
+    text-decoration: line-through;
    
 }

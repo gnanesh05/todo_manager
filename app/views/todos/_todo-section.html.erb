@@ -14,13 +14,16 @@
                         
                            <div class="TodoItem-Container">
                                    <% if todo.completed %>
-                                     <input class="TodoCheckboxChecked" type="checkbox" checked style>
+                                     <input  type="checkbox" checked >
+                                          <div class="TodoCheckboxChecked">
+                                             <%= todo.todo_text %>
+                                          </div>                                
                                    <% else %>
                                      <input class="TodoCheckbox" type="checkbox"> 
+                                      <%= todo.todo_text %>
+                                    
                                     <%end%>
-                                
-                                <%= todo.todo_text %>
-                               
+
                                <% if show_due_date %>
                                <p class="TodoItem-DueDate"> <%= todo.due_date.to_s(:short)%></p>
                                <%end%>
