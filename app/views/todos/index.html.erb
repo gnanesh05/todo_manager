@@ -5,9 +5,11 @@
         <article>
             <h1 class="TodoTitle">My Todo-List</h1>
             <section class="AddTodo">
-                <input class="AddTodo-Text" type="text" placeholder="what's next?">
-                <input class="AddTodo-Date" type="date" placeholder="dd/mm/yyyy">
-                <button class="AddTodo-Button">Add </button>
+             <form action="/todos" method="POST">
+                <input class="AddTodo-Text" type="text" name="todo_text" placeholder="what's next?">
+                <input class="AddTodo-Date" type="date" name="due_date" placeholder="dd/mm/yyyy">
+                <input class="AddTodo-Button" value="Add" type="submit">
+             </form>
             </section>
 
             <%= render partial: "todo-section", locals:{
