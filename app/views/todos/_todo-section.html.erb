@@ -12,19 +12,22 @@
                       <li>
                          
                             <div class="TodoItem-Container">
-                                   <% if todo.completed %>
-                                       <input  type="checkbox" checked >
-                                          <div class="TodoCheckboxChecked">
-                                             <%= todo.todo_text %>
-                                          </div>                                
-                                   <% else %>
-                                     <input class="TodoCheckbox" type="checkbox"> 
-                                      <%= todo.todo_text %>
-                                   <%end%>
-
-                               <% if show_due_date %>
-                               <p class="TodoItem-DueDate"> <%= todo.due_date.to_s(:short)%></p>
-                               <%end%>
+                                <%= form_with(url: "/todos/#{todo.id}", method: "PUT") do %>   
+                                <input  
+                                type="checkbox" 
+                                name="completed"<%= todo.completed ? "checked" : "" %> 
+                                onclick= "this.form.submit()"
+                                >
+                                
+                                
+                                <% end %>
+                                
+                                  <p class='<%= todo.completed ? "TodoCheckboxChecked" : "" %> '>
+                                    <%= todo.todo_text %>
+                                      </p>                                
+                                 <% if show_due_date %>
+                                <p class="TodoItem-DueDate"> <%= todo.due_date.to_s(:short)%></p>
+                                <%end%>
                         
                                <img class="Img-Trash" src="delete.png">
                             </div>
