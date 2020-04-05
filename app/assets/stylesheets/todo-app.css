@@ -66,7 +66,7 @@ body
     visibility: hidden;
 }
 
-.TodoItem-Container:hover img
+.TodoItem-Container:hover .Img-Trash
 {
      visibility: visible;
 }
