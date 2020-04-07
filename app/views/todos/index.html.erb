@@ -5,11 +5,11 @@
         <article>
             <h1 class="TodoTitle">My Todo-List</h1>
             <section class="AddTodo">
-              <%= form_with(url:"/todos", method: "post") do %>
-                 <input class="AddTodo-Text" type="text" name="todo_text" placeholder="what's next?">
-                 <input class="AddTodo-Date" type="date" name="due_date" placeholder="dd/mm/yyyy">
-                 <input class="AddTodo-Button" value="Add" type="submit">
-              <%end%>
+             <%= form_with(url:"/todos", method: "post") do %>
+               <%=text_field_tag( name='todo_text',value=nil,class:"AddTodo-Text",placeholder: "what's next?")  %>
+               <%=date_field_tag(name='due_date',value=nil,class:"AddTodo-Date")  %>
+               <%=button_tag(value='Add',class: "AddTodo-Button")  %>
+             <%end%>
             </section>
 
             <%= render partial: "todo-section", locals:{
