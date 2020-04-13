@@ -10,26 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_16_160923) do
+ActiveRecord::Schema.define(version: 2020_04_13_151726) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "articles", force: :cascade do |t|
-    t.string "article_name"
-    t.string "article_type"
+  create_table "menuItems", force: :cascade do |t|
+    t.text "name"
+    t.text "description"
+    t.decimal "price"
   end
 
-  create_table "products", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "password"
+  create_table "menu_Items", force: :cascade do |t|
+    t.text "name"
+    t.text "description"
+    t.decimal "price"
   end
 
-  create_table "student", id: false, force: :cascade do |t|
-    t.integer "regno"
-    t.string "name", limit: 20
-    t.float "cgpa"
+  create_table "menu_items", force: :cascade do |t|
+    t.text "name"
+    t.text "description"
+    t.decimal "price"
+  end
+
+  create_table "menus", force: :cascade do |t|
+    t.text "name"
   end
 
   create_table "todos", force: :cascade do |t|
@@ -39,9 +44,12 @@ ActiveRecord::Schema.define(version: 2020_03_16_160923) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
+    t.string "first_name"
+    t.string "last_name"
     t.string "email"
-    t.string "password"
+    t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
